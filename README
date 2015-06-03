@@ -1,0 +1,14 @@
+A python class for VASP PROCAR
+
+def __init__(self, inFile='PROCAR',
+             Efermi=0,
+             sigma=0.1, ismear=0,
+             extra=0.1, Ndot=500):
+def readProcar(self):
+def genDOS(self, ions=None, sp=None, kp=None):
+def get_partial_weight(self, ions=None):
+def set_smear(self, ismear=0):
+def set_ndot(self, ndot=500):
+def set_emin(self, emin=-1.0):
+def set_emax(self, emax=1.0):
+def set_fermi(self, fermi=0.0):
