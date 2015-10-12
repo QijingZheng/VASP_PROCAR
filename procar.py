@@ -12,7 +12,7 @@ def findfloats(line):
     1.0 1000 -1.0 +1 +1.0
     """
     # print line
-    floatpat =  r"[-+]?\d+\.\d+|[-+]?\d+"
+    floatpat =  r"\b[-+]?\d+\.\d+\b|\b[-+]?\d+\b"
     return re.findall(floatpat, line)
 
 def Gaussian(x, x0, sigma=0.1):
