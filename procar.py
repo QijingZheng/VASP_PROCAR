@@ -121,7 +121,7 @@ class procar:
         # kpt vector & weight in kpts
         self.kpts=np.array(kpts,dtype=float)[:,1:].ravel().reshape(ispin,nkpts,4)
         # partial weights
-        self.pwht=np.array(pwht,dtype=float).ravel().reshape(ispin,nkpts,nbands,nions+1,ncols)
+        self.pwht=np.array(pwht,dtype=float).ravel().reshape(ispin,nkpts,nbands,nions,ncols)
 
         self.read = True
 
