@@ -104,8 +104,10 @@ class procar:
                 filter(lambda x: 'band ' in x, procar)]
         kpts = [findfloats(line) for line in 
                 filter(lambda x: 'k-point ' in x, procar)]
-        pwht = [line.split()[1:] for line in 
-                filter(lambda x: (not 'energy' in x) and (not 'k-point' in x), procar)]
+        # pwht = [line.split()[1:] for line in 
+        #        filter(lambda x: (not 'energy' in x) and (not 'k-point' in x), procar)]
+        pwht = np.asarray([line.split()[1:] for line in procar                                                                                                                  
+                          if not re.search('[a-zA-Z]', line)], dtype=float)
 
         self.ncols = len(pwht[0])
         self.ispin = len(kpts) / self.nkpts
